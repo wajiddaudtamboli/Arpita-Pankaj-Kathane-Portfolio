@@ -49,10 +49,10 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/20 mb-5 self-start"
+              className="inline-flex items-center justify-center sm:justify-start gap-2 px-2.5 sm:px-4 py-2 rounded-full glass border border-white/20 mb-5 self-start"
             >
               <div className="w-2 h-2 rounded-full bg-teal animate-pulse" />
-              <span className="text-xs font-medium text-emerald-900 dark:text-emerald-300">Director - ICS Global</span>
+              <span className="hidden sm:inline text-xs font-medium text-emerald-900 dark:text-emerald-300 [@media(hover:none)_and_(pointer:coarse)]:hidden">Director - ICS Global</span>
             </motion.div>
 
             {/* Name */}
