@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Star, Lightbulb, BookOpen, Clock, Award, Book } from 'lucide-react';
+import { Mail, Linkedin, Star, Lightbulb, Award, Book } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const PHOTO_URL = '/Arpita-forbes-3.jpeg';
