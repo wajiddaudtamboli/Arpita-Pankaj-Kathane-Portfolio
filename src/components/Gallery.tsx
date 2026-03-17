@@ -53,9 +53,9 @@ const Gallery: React.FC = () => {
           <div className="w-20 h-1 gradient-gold mx-auto rounded-full mt-4" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-12 gap-3 lg:gap-4 items-stretch">
+        <div className="grid lg:grid-cols-12 gap-2.5 sm:gap-3 items-stretch rounded-[10px] bg-card p-2 sm:p-3 shadow-card-premium">
           {/* Left collage: four smaller images */}
-          <div className="lg:col-span-7 grid grid-cols-2 gap-3 lg:gap-4 auto-rows-[150px] sm:auto-rows-[190px] md:auto-rows-[220px]">
+          <div className="lg:col-span-7 grid grid-cols-2 gap-2.5 sm:gap-3 auto-rows-[128px] sm:auto-rows-[170px] md:auto-rows-[205px]">
             {thumbnails.map((item, i) => (
               <motion.div
                 key={item.src}
@@ -66,7 +66,7 @@ const Gallery: React.FC = () => {
                 viewport={{ once: true }}
               >
                 <motion.div
-                  className="relative h-full rounded-[14px] overflow-hidden cursor-zoom-in bg-muted/35 border border-border/60 p-2"
+                  className="relative h-full rounded-[6px] overflow-hidden cursor-zoom-in bg-muted"
                   onClick={() => openPreview(item)}
                   role="button"
                   tabIndex={0}
@@ -77,7 +77,7 @@ const Gallery: React.FC = () => {
                   <img
                     src={item.src}
                     alt={item.alt}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                     loading="lazy"
                   />
                 </motion.div>
@@ -95,7 +95,7 @@ const Gallery: React.FC = () => {
             className="lg:col-span-5"
           >
             <motion.div
-              className="relative rounded-[14px] overflow-hidden cursor-zoom-in bg-muted/35 border border-border/60 p-2 h-[310px] sm:h-[390px] md:h-[450px] lg:h-full lg:min-h-[460px]"
+              className="relative rounded-[6px] overflow-hidden cursor-zoom-in bg-muted h-[268px] sm:h-[350px] md:h-[422px] lg:h-full lg:min-h-[422px]"
               onClick={() => openPreview(featured)}
               role="button"
               tabIndex={0}
@@ -106,7 +106,7 @@ const Gallery: React.FC = () => {
               <img
                 src={featured.src}
                 alt={featured.alt}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
                 loading="lazy"
               />
             </motion.div>
