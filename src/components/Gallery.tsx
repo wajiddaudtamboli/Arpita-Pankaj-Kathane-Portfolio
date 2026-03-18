@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { formatTitle } from '@/lib/formatTitle';
 
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 
@@ -143,7 +144,7 @@ const Gallery: React.FC = () => {
                     Gallery
                   </span>
                 </div>
-                <h4 className="px-1 pt-3 text-sm font-semibold leading-snug text-foreground">{fileName}</h4>
+                <h4 className="px-1 pt-3 text-sm font-semibold leading-snug text-foreground">{formatTitle(fileName)}</h4>
               </motion.div>
             ))}
           </div>

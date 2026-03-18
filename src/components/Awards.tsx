@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { formatTitle } from '@/lib/formatTitle';
 
 const awardImages = [
   'London Book of World Record.png',
@@ -57,7 +58,7 @@ const Awards: React.FC = () => {
                 </span>
               </div>
               <h3 className="px-1 pt-3 text-sm font-semibold leading-snug text-foreground">
-                {fileName}
+                {formatTitle(fileName)}
               </h3>
             </motion.div>
           ))}

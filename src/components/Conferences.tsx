@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { formatTitle } from '@/lib/formatTitle';
 
 const conferences = [
   { year: '2024', title: 'Design Thinking Paper - MJTC, Kerala (March 2)', type: 'Paper Presentation', location: 'Kerala' },
@@ -117,7 +118,7 @@ const Conferences: React.FC = () => {
                     Conference
                   </span>
                 </div>
-                <h4 className="px-1 pt-3 text-sm font-semibold leading-snug text-foreground">{fileName}</h4>
+                <h4 className="px-1 pt-3 text-sm font-semibold leading-snug text-foreground">{formatTitle(fileName)}</h4>
               </motion.div>
             ))}
           </div>
