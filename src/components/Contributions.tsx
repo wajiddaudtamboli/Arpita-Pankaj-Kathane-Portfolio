@@ -122,7 +122,7 @@ const Contributions: React.FC = () => {
                 transition={{ duration: 0.35, delay: i * 0.06 }}
                 className="group rounded-[16px] border border-border bg-card p-3 shadow-card-premium transition-all hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="relative overflow-hidden rounded-[12px] border border-border/70 bg-muted">
+                <div className="relative overflow-hidden rounded-[12px] border border-border/70">
                   <img
                     src={`/assets/awards/${fileName}`}
                     alt={fileName}

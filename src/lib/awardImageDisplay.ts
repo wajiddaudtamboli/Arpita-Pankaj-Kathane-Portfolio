@@ -14,9 +14,5 @@ export function isStraightFrameImage(fileName: string): boolean {
 }
 
 export function getAwardImageClass(fileName: string): string {
-  if (isStraightFrameImage(fileName)) {
-    return 'block w-full h-auto max-h-[28rem] object-contain bg-background p-2';
-  }
-
-  return 'h-56 w-full object-cover';
+  return 'block w-full h-auto object-contain';
 }
