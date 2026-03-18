@@ -153,7 +153,7 @@ const Contributions: React.FC = () => {
               {rolesAndResponsibilities.map((item, i) => (
                 <div key={i} className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
-                  <p className={`text-sm leading-relaxed ${i === 0 ? 'font-semibold text-gold' : 'text-muted-foreground'}`}>{item}</p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{item}</p>
                 </div>
               ))}
             </div>
@@ -173,7 +173,7 @@ const Contributions: React.FC = () => {
                 <div key={i} className="flex items-start gap-3 rounded-[12px] border border-border/70 bg-background/70 p-3">
                   <item.icon className={`w-4 h-4 mt-0.5 flex-shrink-0 ${i === 0 ? 'text-gold' : 'text-teal'}`} />
                   <div>
-                    <div className={`text-sm font-semibold ${i === 0 ? 'text-gold' : 'text-foreground'}`}>{item.title}</div>
+                    <div className="text-sm font-semibold text-foreground">{item.title}</div>
                     <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">{item.detail}</p>
                   </div>
                 </div>
