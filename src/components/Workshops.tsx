@@ -135,7 +135,7 @@ const Workshops: React.FC = () => {
           <h3 className="mb-4 text-lg font-bold text-foreground">
             {tab === 'academic' ? 'Academic Workshops & Sessions' : 'Corporate Training Highlights'}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-start">
             {workshopImages[tab].map((fileName, i) => (
               <motion.div
                 key={fileName}
@@ -143,7 +143,7 @@ const Workshops: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-20px' }}
                 transition={{ duration: 0.35, delay: i * 0.04 }}
-                className="group rounded-[16px] border border-border bg-card p-3 shadow-card-premium transition-all hover:-translate-y-1 hover:shadow-xl"
+                className="group self-start rounded-[16px] border border-border bg-card p-3 shadow-card-premium transition-all hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="relative overflow-hidden rounded-[12px] border border-border/70">
                   <img

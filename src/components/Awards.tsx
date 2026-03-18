@@ -37,7 +37,7 @@ const Awards: React.FC = () => {
           <div className="w-20 h-1 gradient-gold mx-auto rounded-full mt-4" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-start">
           {awardImages.map((fileName, i) => (
             <motion.div
               key={fileName}
@@ -45,7 +45,7 @@ const Awards: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: '-20px' }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group rounded-[16px] border border-border bg-card p-3 shadow-card-premium transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="group self-start rounded-[16px] border border-border bg-card p-3 shadow-card-premium transition-all hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="relative overflow-hidden rounded-[12px] border border-border/70">
                 <img
