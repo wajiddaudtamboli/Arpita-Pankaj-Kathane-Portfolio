@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { getAwardImageClass, isStraightFrameImage } from '@/lib/awardImageDisplay';
 import { formatTitle } from '@/lib/formatTitle';
 
 const awardImages = [
@@ -51,7 +52,7 @@ const Awards: React.FC = () => {
                   src={`/assets/awards/${fileName}`}
                   alt={fileName}
                   loading="lazy"
-                  className="h-52 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className={`${getAwardImageClass(fileName)} ${isStraightFrameImage(fileName) ? '' : 'transition-transform duration-300 group-hover:scale-105'}`}
                 />
                 <span className="absolute left-2 top-2 rounded-full border border-gold/30 bg-background/85 px-2 py-0.5 text-[10px] font-semibold text-gold">
                   Award
