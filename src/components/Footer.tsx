@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
               <img src={NAV_LOGO} alt="ICS Global Logo" className="w-11 h-9 rounded-lg object-contain bg-card p-0.5 shadow-md" loading="lazy" />
               <div>
                 <div className="font-bold text-foreground text-sm font-display">
-                  Dr. Arpita Pankaj Kathane
+                  Dr. Arpita Kathane
                 </div>
                 <div className="text-xs text-muted-foreground">Director – ICS Global</div>
               </div>
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             {/* Copyright + Dev credit */}
             <div className="flex flex-col items-center sm:items-end gap-1">
               <p className="text-xs text-muted-foreground">
-                © {year} Dr. Arpita Pankaj Kathane. {t.footer.rights}
+                © {year} Dr. Arpita Kathane. {t.footer.rights}
               </p>
               <button
                 onClick={() => setDevModalOpen(true)}
