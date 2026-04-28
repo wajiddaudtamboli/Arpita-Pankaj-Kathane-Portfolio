@@ -51,9 +51,8 @@ const DeveloperModal: React.FC<DeveloperModalProps> = ({ open, onClose }) => {
                   </div>
                   <div>
                     <h3 className="font-bold text-white text-lg font-display">
-                      Wajid Daud Tamboli
+                      Dr. Arpita Kathane
                     </h3>
-                    <p className="text-white/70 text-sm">Full Stack Developer & UI/UX Designer</p>
                     <p className="text-gold text-xs font-medium mt-0.5">Idealizeer Content Solution</p>
                   </div>
                 </div>
