@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Linkedin, Mail } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const NAV_LOGO = '/logo.svg';
+// runtime logo selection prefers /logo.jpg then falls back to /logo.svg
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
   const year = new Date().getFullYear();
+  const [logoSrc, setLogoSrc] = useState('/logo.jpg');
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = '/logo.jpg';
+    img.onload = () => setLogoSrc('/logo.jpg');
+    img.onerror = () => setLogoSrc('/logo.svg');
+  }, []);
 
   return (
     <>
@@ -15,7 +23,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             {/* Logo + Name */}
             <div className="flex items-center gap-3">
-              <img src={NAV_LOGO} alt="Dr. Arpita Kathane Logo" className="w-11 h-9 rounded-lg object-contain bg-card p-0.5 shadow-md" loading="lazy" />
+              <img src={logoSrc} alt="Dr. Arpita Kathane Logo" className="w-11 h-9 rounded-lg object-contain bg-card p-0.5 shadow-md" loading="lazy" />
               <div>
                 <div className="font-bold text-foreground text-sm font-display">
                   Dr. Arpita Kathane

@@ -1,4 +1,3 @@
-
 # Premium Director Portfolio Website — Dr. Arpita Kathane
 
 ## Overview
