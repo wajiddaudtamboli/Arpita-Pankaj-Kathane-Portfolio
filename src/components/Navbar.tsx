@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { useLanguage, Language } from '@/contexts/LanguageContext';
 
-// Prefer /logo.jpg when available, fall back to /logo.svg
+const NAV_LOGO = '/logo.jpg';
 
 const navLinks = [
   { key: 'home', href: '#home' },
@@ -19,7 +19,6 @@ const navLinks = [
 
 const Navbar: React.FC = () => {
   const { language, setLanguage, t } = useLanguage();
-  const [logoSrc, setLogoSrc] = useState('/logo.jpg');
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
@@ -28,13 +27,6 @@ const Navbar: React.FC = () => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = '/logo.jpg';
-    img.onload = () => setLogoSrc('/logo.jpg');
-    img.onerror = () => setLogoSrc('/logo.svg');
   }, []);
 
   const langLabels: Record<Language, string> = { en: 'EN', hi: 'हि', mr: 'म' };
@@ -66,7 +58,7 @@ const Navbar: React.FC = () => {
             className="flex items-center gap-2.5 group"
           >
             <div className="w-12 h-10 sm:w-14 sm:h-11 rounded-xl overflow-hidden shadow-gold border border-border/80 flex-shrink-0 bg-card p-1">
-              <img src={logoSrc} alt="Dr. Arpita Kathane Logo" className="w-full h-full object-contain" loading="lazy" />
+              <img src={NAV_LOGO} alt="Dr. Arpita Kathane Logo" className="w-full h-full object-contain" loading="lazy" />
             </div>
             <div className="hidden 2xl:block">
               <span className="font-bold text-foreground text-sm leading-none block font-display">
